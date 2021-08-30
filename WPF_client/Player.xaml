@@ -1,0 +1,14 @@
+﻿<UserControl x:Class="WPF_client.Player"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPF_client"
+             mc:Ignorable="d" 
+             d:DesignHeight="100" FontWeight="Black" FontSize="13" MouseDown="UserControl_MouseDown" Width="195.833">
+    <DockPanel x:Name="container" Margin="0,0,0,19" MouseEnter="DockPanel_MouseEnter">
+        <Image x:Name="img" Height="30" Width="30" HorizontalAlignment="Center" Source="default-user.png" Margin="0, 10, 0, 0" DockPanel.Dock="Top"/>
+        <Label x:Name="lbNum" Height="20" HorizontalAlignment="Center"  Margin="0" Padding="0" DockPanel.Dock="Top" />
+        <Label x:Name="lbName"  Height="20"  HorizontalAlignment="Center"  Margin="0" Padding="0" DockPanel.Dock="Bottom"/>
+    </DockPanel>
+</UserControl>

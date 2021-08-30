@@ -1,0 +1,41 @@
+﻿<Window x:Class="WPF_client.TeamDetails"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_client"
+        mc:Ignorable="d"
+        Title="Details" Height="300" Width="400" Loaded="Window_Loaded">
+
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="Loaded">
+            <BeginStoryboard>
+                <Storyboard Duration="00:00:0.5" Storyboard.TargetProperty="Opacity">
+                    <DoubleAnimation From="0" To="1"/>
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </Window.Triggers>
+
+    <Grid Margin="0,20,5,0">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0">Country:</Label>
+        <Label x:Name="lbCountry" Grid.Row="0" Grid.Column="1" /> 
+
+        <Label Grid.Row="1" Grid.Column="0">Played/Win/Loss/Draw:</Label>
+        <Label x:Name="lbGames" Grid.Row="1" Grid.Column="1" /> 
+
+        <Label Grid.Row="2" Grid.Column="0">Goals(scored/received/diff):</Label>
+        <Label x:Name="lbGoals" Grid.Row="2" Grid.Column="1" /> 
+    </Grid>
+</Window>

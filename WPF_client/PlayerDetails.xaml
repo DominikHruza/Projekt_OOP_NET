@@ -1,0 +1,70 @@
+﻿<Window x:Class="WPF_client.PlayerDetails"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_client"
+        mc:Ignorable="d"
+        Title="Player Details" Height="350" Width="450" Loaded="Window_Loaded">
+
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="Loaded">
+            <BeginStoryboard>
+                <Storyboard>
+
+                    <DoubleAnimation Storyboard.TargetProperty="Height" From="0" To="350" Duration="0:0:0.5" />
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </Window.Triggers>
+    <StackPanel Margin="0,0,0,13">
+
+        <Image x:Name="img" 
+               Height="70" 
+               Width="667" 
+               HorizontalAlignment="Center" 
+               Source="default-user.png" 
+               Margin="-131,10,-165,0"               
+               />
+
+        <Grid x:Name="gridField" DockPanel.Dock="Bottom"  Margin="10, 20 , 5, 5">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label Content="Name:" 
+                   Grid.Row="0" Grid.Column="0"/>
+            <Label x:Name="tfName" Content="test"
+                   Grid.Row="0" Grid.Column="1"/>
+
+            <Label Content="Number:" 
+                   Grid.Row="1" Grid.Column="0" />
+            <Label Content="test:" 
+                   x:Name="tfNum"
+                    Grid.Row="1" Grid.Column="1"/>
+
+            <Label Content="Position: "
+                   Grid.Row="2" Grid.Column="0"/>
+            <Label x:Name="tfPos" Grid.Row="2" Grid.Column="1" Content="dasf"/>
+
+            <Label Content="Goals: "
+                   Grid.Row="3" Grid.Column="0"/>
+            <Label Content="test:" x:Name="tfGoals"
+                   Grid.Row="3" Grid.Column="1"/>
+
+            <Label Content="Yellow cards: "
+                   Grid.Row="4" Grid.Column="0"/>
+            <Label Content="test:" x:Name="tfCards" 
+                   Grid.Row="4" Grid.Column="1"/>
+        </Grid>
+    </StackPanel>
+</Window>
